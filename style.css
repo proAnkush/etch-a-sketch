@@ -1,0 +1,41 @@
+.drawSquare:hover{
+    /* individual drawable square, on which hover event is fired */
+    background-color: black;
+}
+:root {
+    --content-width: 500px;
+}
+body{
+    background: #8E0E00;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1F1C18, #8E0E00);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1F1C18, #8E0E00); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+}
+
+#drawableGrid{
+    background-color: white;
+    display: grid;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+}
+#gridContain{
+    height: 90vw;
+    width: 90vw;
+    max-height: var(--content-width);;
+    max-width: var(--content-width);
+    margin: 3px auto;
+    position: relative;
+}
+#heading{
+    font-family: monospace;
+    color: deepskyblue;
+    text-align: center;
+    font-size: 5vh;
+    font-weight: bold;
+}
