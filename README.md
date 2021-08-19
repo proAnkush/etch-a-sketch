@@ -1,4 +1,4 @@
-# <a href="github.com">Etch-A-Sketch</a>
+# <a href="https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/etch-a-sketch-project">Etch-A-Sketch</a>
 
 This github repository is solely used for showing off thy html, css, javascript and "googling tech stuff" skills, by making a small project `!yay!`.
 <br>
