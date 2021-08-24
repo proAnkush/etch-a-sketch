@@ -39,3 +39,16 @@ body{
     font-size: 5vh;
     font-weight: bold;
 }
+
+#controls{
+    margin: 3% auto;
+}
+.control{
+    padding: 5px 20px;
+    color: white;
+    background-color: black;
+    border: 0px;
+    font-size: 30px;
+    font-weight: lighter;
+    border-radius: 10px;
+}
