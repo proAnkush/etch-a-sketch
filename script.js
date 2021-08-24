@@ -2,6 +2,8 @@
 initiate(10);
 var usedColor = "black";
 
+
+
 function initiate(gridSize){
     if(!Number(gridSize) || gridSize < 0 || gridSize > 100 || gridSize == undefined){
         var gridSize = 10;
@@ -39,36 +41,53 @@ var clearButton = document.getElementById("clear");
 var blackButton = document.getElementById("black");
 var randomButton = document.getElementById("random");
 var eraserButton = document.getElementById("eraser");
+randomButton.style.backgroundColor = "red";
+randomButton.style.color = "white";
 var blackActive = false;
 var randomActive = true;
 var eraserActive = false;
 
 clearButton.addEventListener("click", function(){
-
     initiate(parseInt(prompt("enter grid size: ")));
 })
+
+
 blackButton.addEventListener("click", function(){
-    blackButton.style.border = "2px solid yellow";
-    randomButton.style.border = "0px";
-    eraserButton.style.border = "0px";
+
+    randomButton.style.backgroundColor = "black";
+    blackButton.style.backgroundColor = "red";
+    eraserButton.style.backgroundColor = "black";
+
+    eraserButton.style.color = "white";
+    blackButton.style.color = "white";
+    randomButton.style.color = "white";
     blackActive = true;
     randomActive = false;
     eraserActive = false;
     clearButton.style.border = "0px"
 })
 randomButton.addEventListener("click", function(){
-    randomButton.style.border = "2px solid yellow";
-    blackButton.style.border = "0px";
-    eraserButton.style.border = "0px";
+    randomButton.style.backgroundColor = "red";
+    blackButton.style.backgroundColor = "black";
+    eraserButton.style.backgroundColor = "black";
+
+    eraserButton.style.color = "white";
+    blackButton.style.color = "white";
+    randomButton.style.color = "white";
+
     randomActive = true;
     blackActive = false;
     eraserActive = false;
     clearButton.style.border = "0px"
 })
 eraserButton.addEventListener("click", function(){
-    eraserButton.style.border = "2px solid yellow";
-    blackButton.style.border = "0px";
-    randomButton.style.border = "0px";
+    eraserButton.style.backgroundColor = "red";
+    blackButton.style.backgroundColor = "black";
+    randomButton.style.backgroundColor = "black";
+
+    eraserButton.style.color = "white";
+    blackButton.style.color = "white";
+    randomButton.style.color = "white";
     eraserActive = true;
     randomActive = false;
     blackActive = false;
