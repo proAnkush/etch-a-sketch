@@ -20,6 +20,23 @@ function initiate(gridSize){
     let gridPixels = drawableGrid.querySelectorAll("div");
     gridPixels.forEach(gridP => gridP.style.backgroundColor = "white");
     gridPixels.forEach(gridP => gridP.addEventListener('mouseover', pixelFillColor));
+    document.addEventListener("keypress", shortCutPress);
+}
+
+
+function shortCutPress(e) {
+    let pressedKey = e.key;
+    pressedKey = pressedKey.toLowerCase();
+    if(pressedKey == "c"){
+        initiate(parseInt(prompt("enter grid size: ")));
+    }else if(pressedKey == "b"){
+        blackButtonFunction();
+    }else if(pressedKey == "r"){
+        randomButtonFunction();
+    }else if(pressedKey == "e"){
+        eraserButtonFunction();
+    }
+
 }
 
 function pixelFillColor(){
@@ -52,7 +69,9 @@ clearButton.addEventListener("click", function(){
 })
 
 
-blackButton.addEventListener("click", function(){
+blackButton.addEventListener("click", blackButtonFunction)
+
+function blackButtonFunction(){
 
     randomButton.style.backgroundColor = "black";
     blackButton.style.backgroundColor = "red";
@@ -64,9 +83,12 @@ blackButton.addEventListener("click", function(){
     blackActive = true;
     randomActive = false;
     eraserActive = false;
-    clearButton.style.border = "0px"
-})
-randomButton.addEventListener("click", function(){
+    clearButton.style.border = "0px";
+}
+
+randomButton.addEventListener("click", randomButtonFunction);
+
+function randomButtonFunction(){
     randomButton.style.backgroundColor = "red";
     blackButton.style.backgroundColor = "black";
     eraserButton.style.backgroundColor = "black";
@@ -78,9 +100,11 @@ randomButton.addEventListener("click", function(){
     randomActive = true;
     blackActive = false;
     eraserActive = false;
-    clearButton.style.border = "0px"
-})
-eraserButton.addEventListener("click", function(){
+    clearButton.style.border = "0px";
+};
+eraserButton.addEventListener("click", eraserButtonFunction);
+
+function eraserButtonFunction(){
     eraserButton.style.backgroundColor = "red";
     blackButton.style.backgroundColor = "black";
     randomButton.style.backgroundColor = "black";
@@ -91,5 +115,5 @@ eraserButton.addEventListener("click", function(){
     eraserActive = true;
     randomActive = false;
     blackActive = false;
-    clearButton.style.border = "0px"
-})
+    clearButton.style.border = "0px";
+}

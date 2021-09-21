@@ -1,103 +1,113 @@
-
 :root {
-    --content-width: 500px;
+  --content-width: 500px;
 }
-body{
-    background: #0f0c29;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+body {
+  background: #0f0c29; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #24243e,
+    #302b63,
+    #0f0c29
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 90vh;
-}
-
-#drawableGrid{
-    background-color: white;
-    display: grid;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-color: white;
-    cursor: crosshair;
-}
-#gridContain{
-    height: 90vw;
-    width: 90vw;
-    max-height: var(--content-width);;
-    max-width: var(--content-width);
-    margin: 3px auto;
-    position: relative;
-}
-#heading{
-    font-family: "Bungee Shade", cursive;
-    letter-spacing: 4px;
-    color: #000000;
-    text-align: center;
-    font-size: 5vh;
-    font-weight: bold;
-    background-color: #Feeb00;
-    padding-left: 10px;
-}
-#heading:hover{
-
-    border-left: 10px solid #1a1110;
-    border-collapse: collapse;
-    border-bottom: 10px solid #1a1110;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
 }
 
-hr{
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
+#drawableGrid {
+  background-color: white;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  cursor: crosshair;
+}
+#gridContain {
+  height: 90vw;
+  width: 90vw;
+  max-height: var(--content-width);
+  max-width: var(--content-width);
+  margin: 3px auto;
+  position: relative;
+}
+#heading {
+  font-family: "Bungee Shade", cursive;
+  letter-spacing: 4px;
+  color: #000000;
+  text-align: center;
+  font-size: 5vh;
+  font-weight: bold;
+  background-color: #feeb00;
+  padding-left: 10px;
+}
+#heading:hover {
+  border-left: 10px solid #1a1110;
+  border-collapse: collapse;
+  border-bottom: 10px solid #1a1110;
 }
 
-#controls{
-    margin: 3% auto;
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0.75),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+#controls {
+  margin: 3% auto;
 }
 @media (max-width: 560px) {
-    #controls {
-        display: flex;
-        flex-direction: column;  
-        width: 100%;  
-    }
-    .control{
-        margin-top: 10%;
-        margin: 2% auto;
-    }
+  #controls {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .control {
+    margin-top: 10%;
+    margin: 2% auto;
+    font-size: 25px;
+  }
 }
-.control{
-    padding: 5px 20px;
-    color: white;
-    background-color: black;
-    border: 0px;
-    font-size: 30px;
-    font-weight: lighter;
-    border-radius: 10px;
-    cursor: none;
+
+.control {
+  background-image: linear-gradient(
+    to right,
+    #5c258d 0%,
+    #4389a2 51%,
+    #5c258d 100%
+  );
 }
-.control:active{
-    animation-name: pressed;
-    animation-duration: 1s;
+.control {
+  margin: 10px;
+  padding: 15px 45px;
+  font-size: 1.3vmax;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 3px blue;
+  border-radius: 20px 0px;
+  border: none;
+  cursor: none;
 }
-@keyframes pressed {
-    0%{
-        transform: translateY(5px);
-    }
-    25%{
-        transform: translateY(10px);
-    }
-    75%{
-        transform: translateY(5px);
-    }
-    100%{
-        transform: translateY(0px);
-    }
-}
-.control:hover{
-    background-color: aquamarine;
-    color: black;
-    border-bottom: 4mm ridge rgb(170, 50, 220, .6);
+
+.control:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
