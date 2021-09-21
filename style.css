@@ -49,6 +49,7 @@ body {
   font-weight: bold;
   background-color: #feeb00;
   padding-left: 10px;
+  border-bottom: 10px solid transparent;
 }
 #heading:hover {
   border-left: 10px solid #1a1110;
