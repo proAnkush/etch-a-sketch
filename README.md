@@ -3,12 +3,16 @@
 This github repository is solely used for showing off thy html, css, javascript and "googling tech stuff" skills, by making a small project `!yay!`.
 <br>
 <br>
-<a href="https://proankush.github.io/etch-a-sketch/"><strong>Live preview</strong> </a>
+## <a href="https://proankush.github.io/etch-a-sketch/"><strong>  Live preview</strong> </a>
+<hr>
+<br>
 
-<b>Objective</b><br>
-
+## <b>Objectives</b><br>
+<hr>
 <li>To be able to draw anything on screen by hovering over the drawable area</li>
 <li>To be able to select a grid size </li>
 <li>To be able to change the ink color, or to make the color random.</li>
+<li>Press the corresponding shortcut key, to change the color</li>
+<li>Make it Live on github pages</li>
 
 
